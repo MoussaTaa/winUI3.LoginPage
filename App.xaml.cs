@@ -35,6 +35,7 @@ namespace App1
         public App()
         {
             InitializeComponent();
+            this.RequestedTheme = ApplicationTheme.Light;
         }
 
         /// <summary>
