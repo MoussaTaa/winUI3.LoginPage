@@ -15,9 +15,14 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" Background="Aqua">
-           
+        <StackPanel Grid.Column="0">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/Assets/app backgrounds/mahaliBackgroundImage.webp"
+                    Stretch="UniformToFill" />
+            </StackPanel.Background>
         </StackPanel>
+
+
         <StackPanel Grid.Column="1" Padding="25">
             <StackPanel HorizontalAlignment="Center">
                 <FontIcon Glyph="&#xE7BF;" FontSize="50"/>
