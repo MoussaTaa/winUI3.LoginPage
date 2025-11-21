@@ -14,15 +14,47 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <!-- Welcom + Icons +Sign Up-->
+        <Grid Grid.Column="0" Padding="30">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="RoyalBlue" Offset="0"/>
+                    <GradientStop Color="MediumSlateBlue" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
 
-        <StackPanel Grid.Column="0">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="/Assets/app backgrounds/mahaliBackgroundImage.webp"
-                    Stretch="UniformToFill" />
-            </StackPanel.Background>
-        </StackPanel>
+            <!-- MAIN CONTENT (centered) -->
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Welcome"
+                   Foreground="White"
+                   FontSize="48"
+                   FontWeight="Bold"
+                   Margin="50"/>
 
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Name="Facebook" CornerRadius="90" Width="50" Height="50" Background="white" Margin="10,0,0,10">
+                        <ImageIcon Source="https://cdn-icons-png.freepik.com/512/3128/3128304.png"/>
+                    </Button>
+                    <Button Name="X" CornerRadius="90" Width="50" Height="50" Background="white" Margin="10,0,0,10">
+                        <ImageIcon Source="https://cdn-icons-png.freepik.com/512/2111/2111688.png"/>
+                    </Button>
+                    <Button Name="Google" CornerRadius="90" Width="50" Height="50" Background="white" Margin="10,0,0,10">
+                        <ImageIcon Source="https://cdn-icons-png.freepik.com/512/2991/2991148.png"/>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
 
+            <!-- BOTTOM PANEL -->
+            <StackPanel Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,24">
+                <TextBlock Text="Don't have an account?" Foreground="White" FontFamily="Arial" FontSize="22"/>
+                <HyperlinkButton HorizontalAlignment="Center">
+                    <TextBlock Text="Sign Up"
+                       TextDecorations="Underline"
+                       Foreground="AliceBlue"/>
+                </HyperlinkButton>
+            </StackPanel>
+
+        </Grid>
         <StackPanel Grid.Column="1" Padding="25">
             <StackPanel HorizontalAlignment="Center">
                 <FontIcon Glyph="&#xE7BF;" FontSize="50"/>
